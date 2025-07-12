@@ -7,6 +7,9 @@ import (
 
 func AsciiRepresentation(str string, asciiMap map[rune][]string) {
 	words := strings.Split(str, "\\n")
+	if words[0] == "" {
+		words = words[1:]
+	}
 	slice := [][]string{}
 	for _, word := range words {
 		for _, char := range word {
@@ -28,7 +31,7 @@ func Print(slice [][]string) {
 			lineSlice = append(lineSlice, char[i])
 		}
 		strPrint := strings.Join(lineSlice, " ")
-		if strPrint=="" {
+		if strPrint == "" {
 			fmt.Println()
 			break
 		}

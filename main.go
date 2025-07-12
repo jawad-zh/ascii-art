@@ -14,15 +14,10 @@ func main() {
 		return
 	}
 	input := args[0]
-	if len(input)==0{
+	if len(input) == 0 {
 		fmt.Println("empy string")
 		return
 	}
-	// for _, char := range input {
-	// 	if 32 <= char && char <= 126 {
-	// 	}
-	// }
 	asciiMap := functions.ReadAsciiBanner("standard.txt")
 	functions.AsciiRepresentation(input, asciiMap)
-	// fmt.Printf("%q",asciiMap)
 }
